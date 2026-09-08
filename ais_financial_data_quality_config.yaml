@@ -1,0 +1,39 @@
+project:
+  name: AIS Financial Transaction Data Quality Prediction
+  algorithm: Artificial Immune System + ANN
+  dataset: C:\Users\sagni\Downloads\Financial Transaction Data Quality\dirty_financial_transactions.csv
+ais:
+  algorithm: Clonal Selection Algorithm
+  population_size: 20
+  generations: 15
+  elite_count: 5
+  clones_per_elite: 4
+  mutation_rate: 0.1
+  best_fitness: 0.9849266218935847
+  original_feature_count: 30
+  selected_feature_count: 8
+  selected_features:
+  - year
+  - product_length
+  - quantity_missing
+  - quantity_positive
+  - quantity_negative
+  - price_positive
+  - payment_valid
+  - status_valid
+ann:
+  hidden_layers:
+  - 128
+  - 64
+  - 32
+  - 16
+  optimizer: Adam
+  loss: binary_crossentropy
+  batch_size: 256
+  maximum_epochs: 50
+metrics:
+  accuracy: 0.99685
+  precision: 1.0
+  recall: 0.996800731261426
+  f1_score: 0.9983978027008469
+  roc_auc: 0.999015191085575

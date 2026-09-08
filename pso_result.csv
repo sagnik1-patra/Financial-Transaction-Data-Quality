@@ -1,0 +1,19 @@
+Error_Type,Error_Count,Percentage
+Invalid Date,63381,63.381
+Nonstandard Payment Method,42939,42.939
+Missing Price,33497,33.497
+Nonstandard Status,33404,33.404
+Invalid Price Value,33195,33.195
+Invalid Quantity,31619,31.619
+Missing Status,16679,16.679
+Invalid Product,8843,8.843
+Missing Quantity,5019,5.019
+Invalid Transaction ID,5018,5.018
+Missing Transaction ID,5018,5.018
+Missing Date,4880,4.88
+Invalid Customer ID,4878,4.878
+Missing Customer ID,4878,4.878
+Duplicate Transaction ID,1870,1.87
+Missing Product,0,0.0
+Invalid Price Format,0,0.0
+Missing Payment Method,0,0.0

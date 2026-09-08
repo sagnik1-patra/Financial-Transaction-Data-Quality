@@ -1,0 +1,42 @@
+project:
+  name: AI-Based Financial Transaction Data Quality Prediction
+  dataset: C:\Users\sagni\Downloads\Financial Transaction Data Quality\dirty_financial_transactions.csv
+  output_directory: C:\Users\sagni\Downloads\Financial Transaction Data Quality
+dataset:
+  total_records: 100000
+  total_features: 8
+  clean_records: 1542
+  anomaly_records: 98458
+model:
+  algorithm: Artificial Neural Network
+  framework: TensorFlow Keras
+  input_features: 30
+  hidden_layers:
+  - 128
+  - 64
+  - 32
+  - 16
+  output_activation: sigmoid
+  optimizer: Adam
+  loss: binary_crossentropy
+  maximum_epochs: 50
+  batch_size: 256
+  prediction_threshold: 0.5
+results:
+  accuracy: 1.0
+  precision: 1.0
+  recall: 1.0
+  f1_score: 1.0
+  roc_auc: 1.0
+output_files:
+  model: financial_data_quality_model.h5
+  pipeline: financial_data_quality_pipeline.pkl
+  configuration: financial_data_quality_config.yaml
+  json_results: financial_data_quality_results.json
+  accuracy_graph: accuracy_graph.png
+  heatmap: heatmap.png
+  comparison_graph: comparison_graph.png
+  result_csv: result.csv
+  result_graph: result_graph.png
+  prediction_csv: prediction.csv
+  prediction_graph: prediction_graph.png

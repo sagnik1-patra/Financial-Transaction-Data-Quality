@@ -1,0 +1,64 @@
+project:
+  name: PSO Financial Transaction Data Quality Prediction
+  dataset: C:\Users\sagni\Downloads\Financial Transaction Data Quality\dirty_financial_transactions.csv
+  output_directory: C:\Users\sagni\Downloads\Financial Transaction Data Quality
+dataset:
+  total_records: 100000
+  clean_records: 1542
+  anomaly_records: 98458
+pso:
+  algorithm: Binary Particle Swarm Optimization
+  particles: 20
+  iterations: 15
+  inertia_weight: 0.729
+  cognitive_coefficient: 1.49445
+  social_coefficient: 1.49445
+  best_fitness: 0.9808296622613802
+  original_feature_count: 30
+  selected_feature_count: 11
+  selected_features:
+  - date_valid
+  - product_length
+  - product_valid
+  - quantity_missing
+  - quantity_negative
+  - price_positive
+  - price_length
+  - payment_valid
+  - payment_length
+  - status_valid
+  - status_length
+ann:
+  hidden_layers:
+  - 128
+  - 64
+  - 32
+  - 16
+  optimizer: Adam
+  learning_rate: 0.001
+  loss: binary_crossentropy
+  batch_size: 256
+  maximum_epochs: 50
+  prediction_threshold: 0.5
+metrics:
+  accuracy: 0.99825
+  precision: 1.0
+  recall: 0.99822262847857
+  f1_score: 0.9991105237744289
+  roc_auc: 0.9992742949210043
+output_files:
+  h5_model: pso_financial_data_quality_model.h5
+  pkl_pipeline: pso_financial_data_quality_pipeline.pkl
+  yaml_config: pso_financial_data_quality_config.yaml
+  json_results: pso_financial_data_quality_results.json
+  accuracy_graph: pso_accuracy_graph.png
+  heatmap: pso_heatmap.png
+  comparison_graph: pso_comparison_graph.png
+  result_csv: pso_result.csv
+  result_graph: pso_result_graph.png
+  prediction_csv: pso_prediction.csv
+  prediction_graph: pso_prediction_graph.png
+  feature_selection_csv: pso_feature_selection.csv
+  feature_selection_graph: pso_feature_selection_graph.png
+  optimization_history_csv: pso_optimization_history.csv
+  optimization_history_graph: pso_optimization_history_graph.png
